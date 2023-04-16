@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="349e074d-7416-48ff-8339-afa40d95f2f4" name="Changes" comment="UPDATE 1">
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hELLO.java" beforeDir="false" />
+    <list default="true" id="349e074d-7416-48ff-8339-afa40d95f2f4" name="Changes" comment="Move folder">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Final/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Final/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +53,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
@@ -64,6 +67,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Final" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Final.Main" />
+      <module name="Java1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681655344660</updated>
-      <workItem from="1681655346535" duration="971000" />
+      <workItem from="1681655346535" duration="1165000" />
     </task>
     <task id="LOCAL-00001" summary="hello">
       <created>1681655495261</created>
@@ -116,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681656078363</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="print">
+      <created>1681656337335</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681656337335</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Move folder">
+      <created>1681656431608</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681656431608</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +217,8 @@
     <MESSAGE value="hello cuong" />
     <MESSAGE value="UPDATE" />
     <MESSAGE value="UPDATE 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATE 1" />
+    <MESSAGE value="print" />
+    <MESSAGE value="Move folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move folder" />
   </component>
 </project>
