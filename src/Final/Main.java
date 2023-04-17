@@ -1,14 +1,16 @@
 package Final;
 
-import HomeWork.StaffManager;
-
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        AccountManager accountManager = null;
+        Account account = new Account();
+
         String yourChoose;
+        List<Account> accountLists = new LinkedList<>();
 
         do {
             mainMenu();
@@ -16,11 +18,14 @@ public class Main {
             switch (yourChoose) {
                 case "1":
                     System.out.println("[1] Add Account");
-                    accountManager = new Account();
-                    accountManager.inputData();
+                    account.inputData();
+                    accountLists.add(account);
                     break;
                 case "2":
                     System.out.println("[2] Display");
+                    for (Account accountList:accountLists) {
+                        accountList.displayData();
+                    }
                     break;
                 case "3":
                     System.out.println("[3] Deposit or Withdraw");

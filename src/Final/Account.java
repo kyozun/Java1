@@ -1,48 +1,42 @@
 package Final;
 
 import java.util.InputMismatchException;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Account extends AccountManager {
 
+
     @Override
     public void inputData() {
         this.inputCustomerCode();
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter customer name: ");
-        this.setCustomerName(input.nextLine());
+        this.inputCustomerName();
         this.inputAccountNumber();
         this.inputAmount();
-
 
         System.out.println("Successfully added");
 
 
     }
 
+    private void inputCustomerName() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter customer name: ");
+        this.setCustomerName(input.nextLine());
+    }
+
     private void inputCustomerCode() {
         Scanner input = new Scanner(System.in);
-        String inputCustomerCode = input.nextLine();
-
-        while (true) {
-            System.out.print("Enter customer code: ");
-            if (inputCustomerCode.length() == 5) {
-                this.setCustomerCode(inputCustomerCode);
-                break;
-            } else {
-                System.out.println("Error, please enter customer code again");
-            }
-        }
-
-
-
+        System.out.print("Enter customer code: ");
+        this.setCustomerCode(input.nextLine());
     }
 
     private void inputAccountNumber() {
         Scanner input = new Scanner(System.in);
         int inputNumber = 0;
         do {
-            System.out.print("Enter amount: ");
+            System.out.print("Enter account number: ");
             try {
                 inputNumber = input.nextInt();
                 if (inputNumber <= 0) {
@@ -77,7 +71,13 @@ public class Account extends AccountManager {
 
     @Override
     public void displayData() {
-
+        int length = 55;
+        String line = String.format("%0" + length + "d", 0).replace('0', '-');
+        System.out.println("+" + line + "+");
+        System.out.printf("| %-4s | %-12s | %-14s | %-14s |%n", "Code", "Name", "Account Number", "Amount");
+        System.out.println("+" + line + "+");
+        System.out.printf("| %-4s | %-12s | %-14s | %-14s |%n", this.getCustomerCode(), this.getCustomerName(), this.getAccountNumber(), this.getAmount());
+        System.out.println("+" + line + "+");
     }
 
     @Override
