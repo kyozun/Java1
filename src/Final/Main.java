@@ -23,8 +23,8 @@ public class Main {
                 case "3" -> {
                     System.out.println("Deposit and Withdraw");
                     accountManager.showDepositAndWithdrawMenu();
+
                 }
-//                    accountManager.depositAndWithdraw();
                 case "4" -> System.out.println("Goodbye and see you again!");
                 default -> System.out.println("Number is not available, please try again");
             }
@@ -40,6 +40,5 @@ public class Main {
         System.out.println("\t4. Exit");
         System.out.print("Please choose [1 - 4]: ");
     }
-
 
 }

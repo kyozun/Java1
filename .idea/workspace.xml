@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="349e074d-7416-48ff-8339-afa40d95f2f4" name="Changes" comment="HomeWork">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="349e074d-7416-48ff-8339-afa40d95f2f4" name="Changes" comment="change Input">
       <change beforePath="$PROJECT_DIR$/src/Final/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Final/AccountManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Final/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Final/Main.java" afterDir="false" />
     </list>
@@ -90,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681655344660</updated>
       <workItem from="1681655346535" duration="8493000" />
-      <workItem from="1681783826226" duration="5027000" />
+      <workItem from="1681783826226" duration="5426000" />
     </task>
     <task id="LOCAL-00001" summary="hello">
       <created>1681655495261</created>
@@ -176,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681786312317</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="change Input">
+      <created>1681789071386</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681789071386</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +260,8 @@
     <MESSAGE value="print" />
     <MESSAGE value="Move folder" />
     <MESSAGE value="HomeWork" />
-    <option name="LAST_COMMIT_MESSAGE" value="HomeWork" />
+    <MESSAGE value="change Input" />
+    <option name="LAST_COMMIT_MESSAGE" value="change Input" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

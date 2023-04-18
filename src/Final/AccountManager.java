@@ -23,20 +23,38 @@ public class AccountManager {
     }
 
     public void displayData() {
-        int length = 69;
-        String line = String.format("%0" + length + "d", 0).replace('0', '-');
-        System.out.println("+" + line + "+");
-        System.out.printf("| %-8s | %-16s | %-20s | %-14s |%n", "Code", "Name", "Account Number", "Amount");
-        System.out.println("+" + line + "+");
-        for (Account accountList : accountLists) {
-            System.out.printf("| %-8s | %-16s | %-20s | %-14s |%n", accountList.getCustomerCode(), accountList.getCustomerName(), accountList.getAccountNumber(), accountList.getAmount());
+        if (accountLists.size() == 0) {
+            System.out.println("Data not found, please add new account");
+        } else {
+            int length = 69;
+            String line = String.format("%0" + length + "d", 0).replace('0', '-');
+            System.out.println("+" + line + "+");
+            System.out.printf("| %-8s | %-16s | %-20s | %-14s |%n", "Code", "Name", "Account Number", "Amount");
+            System.out.println("+" + line + "+");
+            for (Account accountList : accountLists) {
+                System.out.printf("| %-8s | %-16s | %-20s | %-14s |%n", accountList.getCustomerCode(), accountList.getCustomerName(), accountList.getAccountNumber(), accountList.getAmount());
+            }
+            System.out.println("+" + line + "+");
         }
-        System.out.println("+" + line + "+");
+
     }
 
     public void depositMoney() {
 
     }
+
+
+    private void findAccountNumber() {
+        int inputAccountNumber = this.inputAccountNumber();
+        for (Account accountList : accountLists) {
+            if (accountList.getAccountNumber() == inputAccountNumber) {
+                System.out.println("Found");
+            } else {
+                System.out.println("Not found");
+            }
+        }
+    }
+
     public void depositAndWithdraw(long money, int type) {
         for (Account accountList : accountLists) {
 //            accountList.getAccountNumber() ==
@@ -49,7 +67,7 @@ public class AccountManager {
 
     public void showDepositAndWithdrawMenu() {
         if (accountLists.size() == 0) {
-            System.out.println("Data not found");
+            System.out.println("Data not found, please add new account");
         } else {
             Scanner input = new Scanner(System.in);
             boolean inputSuccess = false;
@@ -60,6 +78,7 @@ public class AccountManager {
                 String Choose = input.nextLine();
                 switch (Choose) {
                     case "1" -> {
+                        this.findAccountNumber();
                         inputSuccess = true;
 
                     }
@@ -111,8 +130,7 @@ public class AccountManager {
                     Matcher matcher = pattern.matcher(Integer.toString(inputNumber));
                     if (matcher.matches()) {
                         break;
-                    }
-                    else {
+                    } else {
                         System.out.println("Error, must be 6 digits long and starts with \"100\"");
                     }
 
