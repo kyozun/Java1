@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="349e074d-7416-48ff-8339-afa40d95f2f4" name="Changes" comment="HomeWork">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Final/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Final/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Final/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Final/AccountManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Final/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Final/Main.java" afterDir="false" />
     </list>
@@ -91,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681655344660</updated>
       <workItem from="1681655346535" duration="8493000" />
-      <workItem from="1681783826226" duration="2367000" />
+      <workItem from="1681783826226" duration="5027000" />
     </task>
     <task id="LOCAL-00001" summary="hello">
       <created>1681655495261</created>
@@ -170,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681700903525</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="HomeWork">
+      <created>1681786312317</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681786312317</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

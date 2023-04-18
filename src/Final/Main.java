@@ -1,7 +1,5 @@
 package Final;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -11,39 +9,37 @@ public class Main {
 
         String yourChoose;
         do {
-            mainMenu();
+            showMainMenu();
             yourChoose = input.nextLine();
             switch (yourChoose) {
-                case "1":
-                    System.out.println("[1] Add Account");
+                case "1" -> {
+                    System.out.println("Add Account");
                     accountManager.inputData();
-                    break;
-                case "2":
-                    System.out.println("[2] Display");
+                }
+                case "2" -> {
+                    System.out.println("Display Account");
                     accountManager.displayData();
-                    break;
-                case "3":
-                    System.out.println("[3] Deposit and Withdraw");
+                }
+                case "3" -> {
+                    System.out.println("Deposit and Withdraw");
+                    accountManager.showDepositAndWithdrawMenu();
+                }
 //                    accountManager.depositAndWithdraw();
-                    break;
-                case "4":
-                    System.out.println("Goodbye");
-                    break;
-
-                default:
-                    System.out.println("Number is not available, please try again");
-                    break;
+                case "4" -> System.out.println("Goodbye and see you again!");
+                default -> System.out.println("Number is not available, please try again");
             }
         } while (!yourChoose.equals("4"));
     }
 
-    private static void mainMenu() {
+    private static void showMainMenu() {
         System.out.println("====");
         System.out.println("BANK");
         System.out.println("\t1. Add Account");
-        System.out.println("\t2. Display");
+        System.out.println("\t2. Display Account");
         System.out.println("\t3. Deposit and Withdraw");
         System.out.println("\t4. Exit");
         System.out.print("Please choose [1 - 4]: ");
     }
+
+
 }

@@ -34,7 +34,43 @@ public class AccountManager {
         System.out.println("+" + line + "+");
     }
 
+    public void depositMoney() {
+
+    }
     public void depositAndWithdraw(long money, int type) {
+        for (Account accountList : accountLists) {
+//            accountList.getAccountNumber() ==
+        }
+        if (type == 0) {
+
+        }
+
+    }
+
+    public void showDepositAndWithdrawMenu() {
+        if (accountLists.size() == 0) {
+            System.out.println("Data not found");
+        } else {
+            Scanner input = new Scanner(System.in);
+            boolean inputSuccess = false;
+            do {
+                System.out.println("\t1.Deposit");
+                System.out.println("\t2.Withdraw");
+                System.out.print("Please choose [1 - 2]: ");
+                String Choose = input.nextLine();
+                switch (Choose) {
+                    case "1" -> {
+                        inputSuccess = true;
+
+                    }
+                    case "2" -> {
+                        System.out.println("2");
+                        inputSuccess = true;
+                    }
+                    default -> System.out.println("Number is not available, please try again");
+                }
+            } while (!inputSuccess);
+        }
 
     }
 
