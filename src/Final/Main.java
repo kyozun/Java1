@@ -7,31 +7,27 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Account account = new Account();
+        AccountManager accountManager = new AccountManager();
 
         String yourChoose;
-        List<Account> accountLists = new LinkedList<>();
-
         do {
             mainMenu();
             yourChoose = input.nextLine();
             switch (yourChoose) {
                 case "1":
                     System.out.println("[1] Add Account");
-                    account.inputData();
-                    accountLists.add(account);
+                    accountManager.inputData();
                     break;
                 case "2":
                     System.out.println("[2] Display");
-                    for (Account accountList:accountLists) {
-                        accountList.displayData();
-                    }
+                    accountManager.displayData();
                     break;
                 case "3":
-                    System.out.println("[3] Deposit or Withdraw");
+                    System.out.println("[3] Deposit and Withdraw");
+//                    accountManager.depositAndWithdraw();
                     break;
                 case "4":
-                    System.out.println("[4] Exit");
+                    System.out.println("Goodbye");
                     break;
 
                 default:
@@ -43,10 +39,10 @@ public class Main {
 
     private static void mainMenu() {
         System.out.println("====");
-        System.out.println("MENU");
+        System.out.println("BANK");
         System.out.println("\t1. Add Account");
         System.out.println("\t2. Display");
-        System.out.println("\t3. Deposit or Withdraw");
+        System.out.println("\t3. Deposit and Withdraw");
         System.out.println("\t4. Exit");
         System.out.print("Please choose [1 - 4]: ");
     }

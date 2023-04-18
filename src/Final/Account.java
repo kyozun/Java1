@@ -1,89 +1,63 @@
 package Final;
 
-import java.util.InputMismatchException;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
-public class Account extends AccountManager {
+public class Account{
+    private String customerCode;
+    private String customerName;
+    private int accountNumber;
+    private long amount;
 
-
-    @Override
-    public void inputData() {
-        this.inputCustomerCode();
-        this.inputCustomerName();
-        this.inputAccountNumber();
-        this.inputAmount();
-
-        System.out.println("Successfully added");
-
-
+    public Account(String customerCode, String customerName, int accountNumber, long amount) {
+        this.customerCode = customerCode;
+        this.customerName = customerName;
+        this.accountNumber = accountNumber;
+        this.amount = amount;
     }
 
-    private void inputCustomerName() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter customer name: ");
-        this.setCustomerName(input.nextLine());
+    public String getCustomerCode() {
+        return customerCode;
     }
 
-    private void inputCustomerCode() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter customer code: ");
-        this.setCustomerCode(input.nextLine());
+    public void setCustomerCode(String customerCode) {
+        this.customerCode = customerCode;
     }
 
-    private void inputAccountNumber() {
-        Scanner input = new Scanner(System.in);
-        int inputNumber = 0;
-        do {
-            System.out.print("Enter account number: ");
-            try {
-                inputNumber = input.nextInt();
-                if (inputNumber <= 0) {
-                    System.out.println("Please enter a non-negative value for the account number");
-                }
-            } catch (InputMismatchException error) {
-                System.out.println("Error, please enter account number again");
-                input.next();
-            }
-        } while (inputNumber <= 0);
-        this.setAccountNumber(inputNumber);
-
+    public String getCustomerName() {
+        return customerName;
     }
 
-    private void inputAmount() {
-        Scanner input = new Scanner(System.in);
-        long inputNumber = 0;
-        do {
-            System.out.print("Enter amount: ");
-            try {
-                inputNumber = input.nextLong();
-                if (inputNumber <= 0) {
-                    System.out.println("Please enter a non-negative value for the amount");
-                }
-            } catch (InputMismatchException error) {
-                System.out.println("Error, please enter amount again");
-                input.next();
-            }
-        } while (inputNumber <= 0);
-        this.setAmount(inputNumber);
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public long getAmount() {
+        return amount;
+    }
+
+    public void setAmount(long amount) {
+        this.amount = amount;
     }
 
     @Override
-    public void displayData() {
-        int length = 55;
-        String line = String.format("%0" + length + "d", 0).replace('0', '-');
-        System.out.println("+" + line + "+");
-        System.out.printf("| %-4s | %-12s | %-14s | %-14s |%n", "Code", "Name", "Account Number", "Amount");
-        System.out.println("+" + line + "+");
-        System.out.printf("| %-4s | %-12s | %-14s | %-14s |%n", this.getCustomerCode(), this.getCustomerName(), this.getAccountNumber(), this.getAmount());
-        System.out.println("+" + line + "+");
+    public String toString() {
+        return "Account{" +
+                "customerCode='" + customerCode + '\'' +
+                ", customerName='" + customerName + '\'' +
+                ", accountNumber=" + accountNumber +
+                ", amount=" + amount +
+                '}';
     }
 
-    @Override
-    public void depositAndWithdraw(long money, int type) {
 
-    }
 
 
 }
